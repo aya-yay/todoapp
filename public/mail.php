@@ -254,6 +254,7 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 		mail($to, $subject, $adminBody, $header, '-f' . $from);
 		if ($remail == 1 && !empty($post_mail))
 			mail($post_mail, $re_subject, $userBody, $reheader, '-f' . $from);
+			
 	}
 } else if ($confirmDsp == 1) {
 
@@ -364,7 +365,7 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 			<?php } else { ?>
 					<h3>確認画面</h3>
 					<p align="center">以下の内容でよろしいですか？</p>
-					<form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
+					<form action="mail.php" method="POST">
 						<table class="formTable">
 						<?php echo confirmOutput($_POST); //入力内容を表示?>
 						</table>
