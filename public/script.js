@@ -506,7 +506,7 @@ let message = document.getElementById('message');
    xhr.open('POST', '/');
    xhr.setRequestHeader('content-type', 'application/json');
    xhr.onload = function() {
-    console.log(xhr.responseText);
+    // console.log(xhr.responseText);
     if(xhr.responseText == "成功しました") {
       alert('メッセージありがとうございました！');
       name.value = '';
