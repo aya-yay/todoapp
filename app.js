@@ -66,7 +66,7 @@ app.post('/', (req, res) => {
       console.log(error);
       res.send('error');
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log("送信完了: " + info.response);
       res.send("成功しました");
     }
   })

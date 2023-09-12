@@ -503,11 +503,14 @@ let message = document.getElementById('message');
     }
 
    let xhr = new XMLHttpRequest();
+   console.log(xhr);
    xhr.open('POST', '/');
+   console.log(xhr);
    xhr.setRequestHeader('content-type', 'application/json');
+   console.log(xhr);
    xhr.onload = function() {
-    // console.log(xhr.responseText);
-    if(xhr.responseText == "成功しました") {
+    console.log(xhr.responseText);
+    if(xhr.responseText === "成功しました") {
       alert('メッセージありがとうございました！');
       name.value = '';
       email.value = '';
